@@ -87,7 +87,7 @@ print("Generating graph...")
 edge_list = []
 for key in imports_dict:
     for ims in imports_dict[key]:
-        edge_list.append((key, ims))
+        edge_list.append((key.strip("/"), ims.strip("/")))
 
 red_nodes = []
 other_nodes = []
